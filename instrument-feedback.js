@@ -88,9 +88,9 @@ async function setup() {
 
 function draw() {
     let brightness = floor(myAnalysis.getLevel() * 1000)
-    starWrap.style.filter = `drop-shadow(0px 2px ${floor(brightness)}px chartreuse)`
+    starWrap.style.filter = `drop-shadow(0px 2px ${floor(brightness)}px white)`
     let level = constrain(100 - brightness, 49, 100)
-    starWrap.style.opacity = `${level}%`
+    //starWrap.style.opacity = `${level}%`
 }
 
 function startMic() {

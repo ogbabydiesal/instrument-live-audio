@@ -24,9 +24,24 @@ body {
     align-items: center;
     width: 300px;  
     aspect-ratio: 1;
-    background: #F8CA00;
+    /* background: #grey; */
     clip-path: polygon(50% 0,79% 90%,2% 35%,98% 35%,21% 90%);
-    opacity: 75%;
+   
+    /* opacity: 75%; */
+}
+
+.slow-spin {
+  /* Adjust the '10s' to make it faster or slower */
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .center {
@@ -64,7 +79,7 @@ input[type=range]::-moz-range-thumb {
   height: 36px;
   width: 16px;
   border-radius: 3px;
-  
+  box-shadow: 1px 1px 10px white;
   cursor: pointer;
 }
 
@@ -138,6 +153,7 @@ input[type=range]::-webkit-slider-runnable-track {
   height: 8.4px;
   cursor: pointer;
   background: black;
+  box-shadow: 1px 1px 10px black;
 /* border-end-end-radius: 50px;
 border-end-start-radius: 50px;
 border-start-end-radius: 50px;
